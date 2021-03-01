@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Player from './components/Player/Player';
 import Team from './components/Team/Team';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header/Header';
 
 function App() {
     const [players, setPlayers] = useState([]);
@@ -17,16 +19,17 @@ function App() {
         setCards(newCard);
     }
     return (
-        <div className="App">
-            <h1>Select Team Member</h1>
+        <div>
+            <Header></Header>
+            <h1 className='text-center'>Bangladesh Cricket Team Selection</h1>
             <div className="team-container">
                 <div className="player">
                     {
-                        players.map(player => <Player player={player} addPlayer={addPlayer} key={player._id}></Player>)
+                        players.map(player => <Player player={player} addPlayer={addPlayer} key={player.key}></Player>)
                     }
                 </div>
                 <div className="team">
-                    <Team cards={cards} key={cards._id}></Team>
+                    <Team cards={cards} key={cards.key}></Team>
                 </div>
             </div>
 

@@ -4,18 +4,11 @@
 } 
 .player-box {
     border: 1px solid red;
-    border-radius: 10px
+    border-radius: 10px;
 }
 .player-box h2 {
     margin: 0px;
 }
 .player-box h4 {
     margin: 0px;
-}
-.player-box button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: orange;
-    border-radius: 5px;
-    border: none;
 }
