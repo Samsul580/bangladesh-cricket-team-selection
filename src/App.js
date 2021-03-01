@@ -25,11 +25,11 @@ function App() {
             <div className="team-container">
                 <div className="player">
                     {
-                        players.map(player => <Player player={player} addPlayer={addPlayer} key={player.key}></Player>)
+                        players.map(player => <Player player={player} addPlayer={addPlayer} key={player._id}></Player>)
                     }
                 </div>
                 <div className="team">
-                    <Team cards={cards} key={cards.key}></Team>
+                    <Team cards={cards} key={cards._id}></Team>
                 </div>
             </div>
 
